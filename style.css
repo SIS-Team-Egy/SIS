@@ -148,7 +148,7 @@ nav .navLink {
     text-shadow: 3px 3px 12px var(--Sec-color);
 }
 
-.homeTextContent button {
+.homeTextContent a {
     border: 2px solid currentColor;
     border-radius: 3rem;
     color: var(--main-color);
@@ -166,7 +166,7 @@ nav .navLink {
     cursor: pointer;
 }
 
-.homeTextContent button::after {
+.homeTextContent a::after {
     content: '';
     background-color: var(--main-color);
     border-radius: 3rem;
@@ -183,11 +183,11 @@ nav .navLink {
     z-index: -1;
 }
 
-.homeTextContent button:hover::after {
+.homeTextContent a:hover::after {
     transform: translate(0, 0);
 }
 
-.homeTextContent button:hover {
+.homeTextContent a:hover {
     border: 2px solid transparent;
     color: #fff;
     font-weight: 400;
@@ -815,18 +815,18 @@ footer h1 {
         font-size: 12px;
     }
 
-    .homeTextContent button {
+    .homeTextContent a {
         background-color: var(--main-color);
         color: #fff;
         border-color: var(--main-color);
     }
 
-    .homeTextContent button:hover {
+    .homeTextContent a:hover {
         pointer-events: none;
     }
 
-    .homeTextContent button::after ,
-    .homeTextContent button::before {
+    .homeTextContent a::after ,
+    .homeTextContent a::before {
         content: none;
         display: none;
     }
@@ -835,6 +835,9 @@ footer h1 {
         width: 100%;
     }
 
+    .ScrollIcon:hover i {
+        margin: 0;
+    }
     
     /* ! About style media screen 320px */
     #About {
@@ -975,6 +978,11 @@ footer h1 {
         padding: 6px 20px;
     }
 
+    form button:hover {
+        background-color: var(--main-color);
+        color: #292F36;
+    }
+
     /* ! footer style media screen 320px */
     footer {
         flex-direction: column;
@@ -995,6 +1003,14 @@ footer h1 {
 
     .phone a {
         font-size: 14px;
+    }
+
+    .linksFooter a:hover {
+        background-color: var(--main-color);
+    }
+
+    .linksFooter a:hover i {
+        color: #292F36;
     }
 }
 
@@ -1078,24 +1094,28 @@ footer h1 {
         font-size: 13px;
     }
 
-    .homeTextContent button {
+    .homeTextContent a {
         background-color: var(--main-color);
         color: #fff;
         border-color: var(--main-color);
     }
 
-    .homeTextContent button:hover {
+    .homeTextContent a:hover {
         pointer-events: none;
     }
 
-    .homeTextContent button::after ,
-    .homeTextContent button::before {
+    .homeTextContent a::after ,
+    .homeTextContent a::before {
         content: none;
         display: none;
     }
 
     .homeContent img {
         width: 100%;
+    }
+
+    .ScrollIcon:hover i {
+        margin: 0;
     }
 
     /* ! About style (min-width: 321px) and (max-width: 480px)*/
@@ -1243,6 +1263,11 @@ footer h1 {
         padding: 6px 20px;
     }
 
+    form button:hover {
+        background-color: var(--main-color);
+        color: #292F36;
+    }
+
     /* ! footer style (min-width: 321px) and (max-width: 480px) */
     footer {
         flex-direction: column;
@@ -1263,6 +1288,14 @@ footer h1 {
 
     .phone a {
         font-size: 14px;
+    }
+
+    .linksFooter a:hover {
+        background-color: var(--main-color);
+    }
+
+    .linksFooter a:hover i {
+        color: #292F36;
     }
 }
 
@@ -1356,24 +1389,28 @@ footer h1 {
         text-shadow: 3px 3px 12px var(--Sec-color);
     }
 
-    .homeTextContent button {
+    .homeTextContent a {
         background-color: var(--main-color);
         color: #fff;
         border-color: var(--main-color);
     }
 
-    .homeTextContent button:hover {
+    .homeTextContent a:hover {
         pointer-events: none;
     }
 
-    .homeTextContent button::after ,
-    .homeTextContent button::before {
+    .homeTextContent a::after ,
+    .homeTextContent a::before {
         content: none;
         display: none;
     }
 
     .homeContent img {
         width: 100%;
+    }
+
+    .ScrollIcon:hover i {
+        margin: 0;
     }
 
     /* ! About style (min-width: 481px) and (max-width: 767px)*/
@@ -1521,6 +1558,11 @@ footer h1 {
         padding: 6px 20px;
     }
 
+    form button:hover {
+        background-color: var(--main-color);
+        color: #292F36;
+    }
+
     /* ! footer style (min-width: 481px) and (max-width: 767px) */
     footer {
         flex-direction: column;
@@ -1541,6 +1583,14 @@ footer h1 {
 
     .phone a {
         font-size: 14px;
+    }
+
+    .linksFooter a:hover {
+        background-color: var(--main-color);
+    }
+
+    .linksFooter a:hover i {
+        color: #292F36;
     }
 }
 
@@ -1590,24 +1640,28 @@ footer h1 {
         text-shadow: 3px 3px 12px var(--Sec-color);
     }
 
-    .homeTextContent button {
+    .homeTextContent a {
         background-color: var(--main-color);
         color: #fff;
         border-color: var(--main-color);
     }
 
-    .homeTextContent button:hover {
+    .homeTextContent a:hover {
         pointer-events: none;
     }
 
-    .homeTextContent button::after ,
-    .homeTextContent button::before {
+    .homeTextContent a::after ,
+    .homeTextContent a::before {
         content: none;
         display: none;
     }
 
     .homeContent img {
         width: 100%;
+    }
+
+    .ScrollIcon:hover i {
+        margin: 0;
     }
 
     /* ! About style (min-width: 768px) and (max-width: 1024px)*/
@@ -1755,6 +1809,11 @@ footer h1 {
         padding: 6px 20px;
     }
 
+    form button:hover {
+        background-color: var(--main-color);
+        color: #292F36;
+    }
+
     /* ! footer style (min-width: 768px) and (max-width: 1024px) */
     footer {
         flex-direction: column;
@@ -1775,6 +1834,14 @@ footer h1 {
 
     .phone a {
         font-size: 14px;
+    }
+
+    .linksFooter a:hover {
+        background-color: var(--main-color);
+    }
+
+    .linksFooter a:hover i {
+        color: #292F36;
     }
 }
 

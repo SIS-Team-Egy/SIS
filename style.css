@@ -1,0 +1,1801 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins' , sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-color: #ffba00;
+    --Sec-color: #210440;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    width: 553px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 3px;
+    border-radius: 50px;
+    border: 2px solid var(--main-color);
+    background-color: rgba(18, 18, 18, 0.5);
+    backdrop-filter: blur(15px);
+    z-index: 999;
+    transition: height .4s ease;
+}
+
+header .logoHeader {
+    text-decoration: none;
+    padding: 10px 25px;
+}
+
+header .logoHeader h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+nav {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+nav .navLink {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    padding: 9px 25px;
+    border-radius: 50px;
+    transition: all ease-out 0.5s ;
+}
+
+#menu-icon {
+    display: none;
+    color: var(--main-color);
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* ! Home */
+
+.Home {
+    height: 100vh;
+    width: 100%;
+    background-image: url(./Assets/Home/homeBg.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeContent {
+    width: 70%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+.homeTextContent {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+
+.homeTextContent-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.homeTextContent .homeTextContent-1 h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--Sec-color);
+}
+
+.homeTextContent .homeTextContent-1 h2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--Sec-color);
+    line-height: 55px;
+}
+
+.homeTextContent .homeTextContent-1 h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--Sec-color);
+    line-height: 70px;
+}
+
+.homeTextContent .homeTextContent-1 h3 span {
+    color: #fff;
+}
+
+.homeContent img {
+    width: 40%;
+    max-width: 500px;
+    height: auto;
+    transform: scale(1);
+    pointer-events: none;
+}
+
+.homeTextContent p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 3px 3px 12px var(--Sec-color);
+}
+
+.homeTextContent button {
+    border: 2px solid currentColor;
+    border-radius: 3rem;
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: 500;
+    overflow: hidden;
+    width: fit-content;
+    padding: 10px 20px;
+    position: relative;
+    text-decoration: none;
+    transition: 0.2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.homeTextContent button::after {
+    content: '';
+    background-color: var(--main-color);
+    border-radius: 3rem;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: 0.2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+
+.homeTextContent button:hover::after {
+    transform: translate(0, 0);
+}
+
+.homeTextContent button:hover {
+    border: 2px solid transparent;
+    color: #fff;
+    font-weight: 400;
+    transform: scale(1.05);
+    will-change: transform;
+}
+
+/* ! Scroll icon Styles*/
+
+.ScrollIcon {
+    transform: scale(0);
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    z-index: 999;
+    cursor: pointer;
+    transition: .4s all ease;
+}
+
+.ScrollIcon:hover i {
+    margin-bottom: 10px;
+}
+
+.ScrollIcon i {
+    font-size: 24px;
+    color: #fff;
+    transition: .4s all ease;
+}
+
+/* ! About me Page*/
+#About {
+    width: 100%;
+    height: 100vh;
+    background-color: #1A1E23;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    z-index: -2;
+}
+
+#About::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url(/Assets/AboutMe/About\ me\ bg.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.aboutContent {
+    display: flex;
+    padding: 0 128px;
+}
+
+.aboutContentText {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.aboutContentText h1 {
+    width: fit-content;
+    font-size: 64px;
+    color: #fff;
+    font-weight: 500;
+    padding: 16px 40px;
+    background-color: #1A1E23;
+    border: 4px solid var(--main-color);
+    border-image-slice: 1;
+    border-radius: 46px 0;
+}
+
+.aboutContentText .part2 {
+    width: 80%;
+    height: auto;
+    padding: 24px 40px;
+    background-color: #292F36;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.aboutContentText .part2 h6 {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--main-color);
+}
+
+.aboutContentText .part2 h2 {
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+.AboutMeTextP p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.AboutMeTextP p span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.aboutContentText .part2 .AboutMeTextP {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* ! Skills Page Styling*/
+#Skills {
+    width: 100%;
+    height: 100vh;
+    background-color: #1A1E23;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Skills::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url(/Assets/Skills/SkillsBg.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+}
+
+#Skills h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+}
+
+#Skills .SkillsTitle div {
+    width: 200px;
+    height: 2px;
+    margin: 10px auto 40px auto;
+    background: linear-gradient(to right, transparent, var(--main-color), transparent);
+}
+
+#SkillsBars {
+    width: 80%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6%;
+}
+
+#SkillsBars .skill {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+#SkillsBars .skill span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+#SkillsBars .skill .bar {
+    height: 7px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+#SkillsBars .skill .bar .inner {
+    width: 0;
+    height: 100%;
+    background: #FFBA00;
+    background: var(--main-color);
+    border-radius: 50px;
+    transition: width 2s ease-in-out;
+}
+
+
+/* ! Projects Part */
+#Projects {
+    width: 100%;
+    height: 100vh;
+    background-color: #12002F;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 0;
+}
+
+#Projects::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url(/Assets/Projects/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.ProjectTexts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ProjectsTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ProjectsTitle h1 {
+    font-size: 63px;
+    font-weight: 400;
+    color: var(--main-color);
+}
+
+.ProjectsTitle div {
+    width: 360px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #fff, transparent);
+}
+
+.ProjectTexts p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.ProjectSliderPart {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.ProjectSliderPart button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background-color: var(--main-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    cursor: pointer;
+}
+
+.ProjectSliderPart button i {
+    font-size: 24px;
+    color: #fff;
+    transition: .6s all ease;
+}
+
+.ProjectSliderPart button:nth-child(1):hover i {
+    margin-right: 10px;
+}
+
+.ProjectSliderPart button:last-child:hover i {
+    margin-left: 10px;
+}
+
+.project {
+    width: 436px;
+    height: 558px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.ProjectSliderPart .project img {
+    width: 436px;
+    height: 558px;
+    border-radius: 15px;
+    position: absolute;
+	object-fit: cover;
+}
+
+.project #sec {
+	left: -100%;
+}
+
+@keyframes slideNextOut {
+    from { left: 0; }
+    to { left: -100%; }
+}
+
+@keyframes slideNextIn {
+    from { left: 100%; }
+    to { left: 0; }
+}
+
+@keyframes slidePrevOut {
+    from { left: 0; }
+    to { left: 100%; }
+}
+
+@keyframes slidePrevIn {
+    from { left: -100%; }
+    to { left: 0; }
+}
+
+
+/* ! Contact Part */
+#Contact {
+    width: 100%;
+    height: 70vh;
+    background-color: hsl(213, 15%, 12%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.contactTopTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.contactTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactTitle h1 {
+    font-size: 53px;
+    font-weight: 400;
+    color: var(--main-color);
+}
+
+.contactTitle div {
+    width: 300px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #fff, transparent);
+}
+
+.contactTopTitle p {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.contactInpsPart {
+    height: 70%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+.contactInpsPart h1 {
+    font-size: 28px;
+    font-weight: 500;
+    padding: 10px 34px;
+    color: var(--main-color);
+    border: 2.5px solid var(--main-color);
+    border-radius: 28px 0;
+}
+
+.contactInpsPart form {
+    width: 60%;
+    height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+.inpts {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+}
+
+.inpts div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.inpts div h2 {
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--main-color);
+}
+
+.inpts div input {
+    width: 100%;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--main-color);
+    outline: none;
+}
+
+.nameInp input,
+.emailInp input {
+    width: 40%;
+}
+
+.messageInp {
+    width: 100%;
+    grid-column: 1/-1;
+}
+
+form button {
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 8px 24px;
+    border-radius: 32px;
+    background-color: var(--main-color);
+    color: #292F36;
+    border: 2.5px solid var(--main-color);
+    transition: .6s all ease;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: transparent;
+    color: var(--main-color);
+}
+
+
+/* ! Footer Design */
+footer {
+    min-height: 70px;
+    width: 100%;
+    background-color: #292F36;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+footer h1 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.phone i {
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+.phone a {
+    text-decoration: underline;
+    color: var(--main-color);
+    cursor: pointer;
+    transition: .4s all ease;
+}
+
+.phone a:hover {
+    color: #a8730a;
+    text-decoration: underline;
+}
+
+.linksFooter {
+    display: flex;
+    gap: 32px;
+}
+
+.linksFooter a {
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    transition: .6s all ease;
+}
+
+.linksFooter a:hover {
+    background-color: transparent;
+}
+
+.linksFooter a:hover i {
+    color: var(--main-color);
+}
+
+.linksFooter a i {
+    font-size: 14px;
+    color: #292F36;
+    transition: .6s all ease;
+}
+
+
+@media  only screen and (max-width: 320px) {
+    header {
+        width: 90%;
+        height: 80px;
+        flex-direction: column;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0 10px;
+    }
+
+    .logoHeader {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navLink {
+        display: flex;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    header.expanded {
+        height: 500px;
+    }
+
+    nav.expanded {
+        display: flex;
+    }
+
+    nav .navLink {
+        width: 100%;
+        height: 15%;
+        align-items: center;
+    }
+
+    .Home {
+        width: 100vw;
+    }
+
+    .homeContent {
+        height: fit-content;
+        flex-direction: column-reverse;
+        gap: 40px;
+        width: 95%;
+    }
+
+    .homeTextContent {
+        width: 100%;
+        align-items: center;
+    }
+
+    .homeTextContent .homeTextContent-1 h1 {
+        font-size: 18px;
+    }
+
+    .homeTextContent .homeTextContent-1 h2 {
+        font-size: 28px;
+        line-height: normal;
+    }
+
+    .homeTextContent .homeTextContent-1 h3 {
+        font-size: 17px;
+        line-height: normal;
+    }
+
+    .homeTextContent p {
+        font-size: 12px;
+    }
+
+    .homeTextContent button {
+        background-color: var(--main-color);
+        color: #fff;
+        border-color: var(--main-color);
+    }
+
+    .homeTextContent button:hover {
+        pointer-events: none;
+    }
+
+    .homeTextContent button::after ,
+    .homeTextContent button::before {
+        content: none;
+        display: none;
+    }
+
+    .homeContent img {
+        width: 100%;
+    }
+
+    
+    /* ! About style media screen 320px */
+    #About {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .aboutContent {
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aboutContentText {
+        width: fit-content;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aboutContentText h1 {
+        font-size: 20px;
+        border-radius: 24px 0;
+    }
+
+    .aboutContentText .part2 h6 {
+        font-size: 10px;
+    }
+
+    .aboutContentText .part2 h2 {
+        font-size: 18px;
+    }
+
+    .part2 .AboutMeTextP p {
+        font-size: 10px;
+    }
+
+    .aboutContent img {
+        display: none;
+    }
+
+    /* ! Skills style media screen 320px*/
+    #Skills {
+        height: 70vh;
+    }
+    
+    #Skills h1 {
+        font-size: 24px;
+    }
+
+    #Skills .SkillsTitle div {
+        width: 120px;
+    }
+
+    #SkillsBars {
+        width: 95%;
+    }
+
+    /* ! Projects style media screen 320px */
+    #Projects {
+        height: 60vh;
+        justify-content: space-evenly;
+    }
+
+    .ProjectsTitle h1 {
+        font-size: 24px;
+    }
+
+    .ProjectsTitle div {
+        width: 120px;
+    }
+
+    .ProjectTexts p {
+        font-size: 10px;
+    }
+
+    .ProjectSliderPart {
+        height: calc(358px - 36px);
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .project {
+        width: 200px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ProjectSliderPart .project img {
+        width: 200px;
+        height: calc(358px - 36px);
+    }
+
+    .ProjectSliderPart button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .ProjectSliderPart button i {
+        font-size: 18px;
+    }
+
+    .ProjectSliderPart button:nth-child(1):hover i {
+        margin-right: 0px;
+    }
+
+    .ProjectSliderPart button:last-child:hover i {
+        margin-left: 0px;
+    }
+
+
+    /* ! Contact style media screen 320px */
+    .contactTitle h1 {
+        font-size: 24px;
+    }
+
+    .contactTitle div {
+        width: 140px;
+    }
+
+    .contactTopTitle p {
+        font-size: 10px;
+    }
+
+    .contactInpsPart h1 {
+        font-size: 16px;
+        padding: 5px 24px;
+        border-radius: 16px 0;
+    }
+
+    .contactInpsPart form {
+        width: 95%;
+    }
+
+    form button {
+        font-size: 16px;
+        padding: 6px 20px;
+    }
+
+    /* ! footer style media screen 320px */
+    footer {
+        flex-direction: column;
+        padding: 10px 5px;
+    }
+
+    footer h1 {
+        font-size: 11px;
+    }
+
+    .phone i {
+        font-size: 18px;
+    }
+
+    .linksFooter {
+        gap: 12px;
+    }
+
+    .phone a {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    header {
+        width: 90%;
+        height: 80px;
+        flex-direction: column;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0 10px;
+    }
+
+    .logoHeader {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navLink {
+        display: flex;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    header.expanded {
+        height: 500px;
+    }
+
+    nav.expanded {
+        display: flex;
+    }
+
+    nav .navLink {
+        width: 100%;
+        height: 15%;
+        align-items: center;
+    }
+
+    .Home {
+        width: 100vw;
+    }
+
+    .homeContent {
+        height: fit-content;
+        flex-direction: column-reverse;
+        gap: 40px;
+        width: 95%;
+    }
+
+    .homeTextContent {
+        width: 100%;
+        align-items: start;
+    }
+
+    .homeTextContent .homeTextContent-1 h1 {
+        font-size: 22px;
+    }
+
+    .homeTextContent .homeTextContent-1 h2 {
+        font-size: 34px;
+        line-height: normal;
+    }
+
+    .homeTextContent .homeTextContent-1 h3 {
+        font-size: 20px;
+        line-height: normal;
+    }
+
+    .homeTextContent p {
+        font-size: 13px;
+    }
+
+    .homeTextContent button {
+        background-color: var(--main-color);
+        color: #fff;
+        border-color: var(--main-color);
+    }
+
+    .homeTextContent button:hover {
+        pointer-events: none;
+    }
+
+    .homeTextContent button::after ,
+    .homeTextContent button::before {
+        content: none;
+        display: none;
+    }
+
+    .homeContent img {
+        width: 100%;
+    }
+
+    /* ! About style (min-width: 321px) and (max-width: 480px)*/
+
+    #About {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .aboutContent {
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aboutContentText {
+        width: fit-content;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aboutContentText h1 {
+        font-size: 30px;
+        border-radius: 24px 0;
+    }
+
+    .aboutContentText .part2 {
+        width: 95%;
+    }
+
+    .aboutContentText .part2 h6 {
+        font-size: 16px;
+    }
+
+    .aboutContentText .part2 h2 {
+        font-size: 22px;
+    }
+
+    .part2 .AboutMeTextP p {
+        font-size: 14px;
+    }
+
+    .aboutContent img {
+        display: none;
+    }
+
+    /* ! Skills style (min-width: 321px) and (max-width: 480px) */
+    #Skills {
+        height: 70vh;
+    }
+
+    #Skills h1 {
+        font-size: 24px;
+    }
+
+    #Skills .SkillsTitle div {
+        width: 120px;
+    }
+
+    #SkillsBars {
+        width: 95%;
+    }
+
+    /* ! Projects style (min-width: 321px) and (max-width: 480px) */
+    #Projects {
+        height: 60vh;
+        justify-content: space-evenly;
+    }
+
+    .ProjectsTitle h1 {
+        font-size: 24px;
+    }
+
+    .ProjectsTitle div {
+        width: 120px;
+    }
+
+    .ProjectTexts p {
+        font-size: 10px;
+    }
+
+    .ProjectSliderPart {
+        height: 70%;
+        width: 80%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .project {
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ProjectSliderPart .project img {
+        width: 100%;
+        height: 70%;
+    }
+
+    .ProjectSliderPart button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .ProjectSliderPart button i {
+        font-size: 18px;
+    }
+
+    .ProjectSliderPart button:nth-child(1):hover i {
+        margin-right: 0px;
+    }
+
+    .ProjectSliderPart button:last-child:hover i {
+        margin-left: 0px;
+    }
+
+
+    /* ! Contact style (min-width: 321px) and (max-width: 480px) */
+    .contactTitle h1 {
+        font-size: 24px;
+    }
+
+    .contactTitle div {
+        width: 140px;
+    }
+
+    .contactTopTitle p {
+        font-size: 10px;
+    }
+
+    .contactInpsPart h1 {
+        font-size: 16px;
+        padding: 5px 24px;
+        border-radius: 16px 0;
+    }
+
+    .contactInpsPart form {
+        width: 95%;
+    }
+
+    form button {
+        font-size: 16px;
+        padding: 6px 20px;
+    }
+
+    /* ! footer style (min-width: 321px) and (max-width: 480px) */
+    footer {
+        flex-direction: column;
+        padding: 10px 5px;
+    }
+
+    footer h1 {
+        font-size: 11px;
+    }
+
+    .phone i {
+        font-size: 18px;
+    }
+
+    .linksFooter {
+        gap: 12px;
+    }
+
+    .phone a {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    header {
+        width: 90%;
+        height: 80px;
+        flex-direction: column;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0 10px;
+    }
+
+    .logoHeader {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navLink {
+        display: flex;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    header.expanded {
+        height: 500px;
+    }
+
+    nav.expanded {
+        display: flex;
+    }
+
+    nav .navLink {
+        width: 100%;
+        height: 15%;
+        align-items: center;
+    }
+
+    .Home {
+        width: 100vw;
+    }
+
+    .homeContent {
+        height: fit-content;
+        flex-direction: column-reverse;
+        gap: 40px;
+        width: 95%;
+    }
+
+    .homeTextContent {
+        width: 100%;
+        align-items: start;
+    }
+
+    .homeTextContent .homeTextContent-1 h1 {
+        font-size: 22px;
+        text-shadow: 3px 3px 12px var(--Sec-color);
+    }
+
+    .homeTextContent .homeTextContent-1 h2 {
+        font-size: 34px;
+        line-height: normal;
+        color: #fff;
+        text-shadow: 3px 3px 12px var(--Sec-color);
+    }
+
+    .homeTextContent .homeTextContent-1 h3 {
+        font-size: 20px;
+        line-height: normal;
+        color: #fff;
+        text-shadow: 3px 3px 12px var(--Sec-color);
+    }
+
+    .homeTextContent p {
+        font-size: 13px;
+    }
+
+    .homeTextContent .homeTextContent-1 h3 span {
+        color: var(--main-color);
+        text-shadow: 3px 3px 12px var(--Sec-color);
+    }
+
+    .homeTextContent button {
+        background-color: var(--main-color);
+        color: #fff;
+        border-color: var(--main-color);
+    }
+
+    .homeTextContent button:hover {
+        pointer-events: none;
+    }
+
+    .homeTextContent button::after ,
+    .homeTextContent button::before {
+        content: none;
+        display: none;
+    }
+
+    .homeContent img {
+        width: 100%;
+    }
+
+    /* ! About style (min-width: 481px) and (max-width: 767px)*/
+
+    #About {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .aboutContent {
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aboutContentText {
+        width: fit-content;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aboutContentText h1 {
+        font-size: 30px;
+        border-radius: 24px 0;
+    }
+
+    .aboutContentText .part2 {
+        width: 95%;
+    }
+
+    .aboutContentText .part2 h6 {
+        font-size: 16px;
+    }
+
+    .aboutContentText .part2 h2 {
+        font-size: 22px;
+    }
+
+    .part2 .AboutMeTextP p {
+        font-size: 14px;
+    }
+
+    .aboutContent img {
+        display: none;
+    }
+
+    /* ! Skills style (min-width: 481px) and (max-width: 767px) */
+    #Skills {
+        height: 70vh;
+    }
+
+    #Skills h1 {
+        font-size: 24px;
+    }
+
+    #Skills .SkillsTitle div {
+        width: 120px;
+    }
+
+    #SkillsBars {
+        width: 95%;
+    }
+
+    /* ! Projects style (min-width: 481px) and (max-width: 767px) */
+    #Projects {
+        height: 80vh;
+        justify-content: space-evenly;
+    }
+
+    .ProjectsTitle h1 {
+        font-size: 24px;
+    }
+
+    .ProjectsTitle div {
+        width: 120px;
+    }
+
+    .ProjectTexts p {
+        font-size: 10px;
+    }
+
+    .ProjectSliderPart {
+        height: 70%;
+        width: 80%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .project {
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ProjectSliderPart .project img {
+        width: 100%;
+        height: 70%;
+    }
+
+    .ProjectSliderPart button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .ProjectSliderPart button i {
+        font-size: 18px;
+    }
+
+    .ProjectSliderPart button:nth-child(1):hover i {
+        margin-right: 0px;
+    }
+
+    .ProjectSliderPart button:last-child:hover i {
+        margin-left: 0px;
+    }
+
+
+    /* ! Contact style (min-width: 481px) and (max-width: 767px) */
+    .contactTitle h1 {
+        font-size: 24px;
+    }
+
+    .contactTitle div {
+        width: 140px;
+    }
+
+    .contactTopTitle p {
+        font-size: 10px;
+    }
+
+    .contactInpsPart h1 {
+        font-size: 16px;
+        padding: 5px 24px;
+        border-radius: 16px 0;
+    }
+
+    .contactInpsPart form {
+        width: 95%;
+    }
+
+    form button {
+        font-size: 16px;
+        padding: 6px 20px;
+    }
+
+    /* ! footer style (min-width: 481px) and (max-width: 767px) */
+    footer {
+        flex-direction: column;
+        padding: 10px 5px;
+    }
+
+    footer h1 {
+        font-size: 11px;
+    }
+
+    .phone i {
+        font-size: 18px;
+    }
+
+    .linksFooter {
+        gap: 12px;
+    }
+
+    .phone a {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .Home {
+        width: 100vw;
+    }
+
+    .homeContent {
+        height: fit-content;
+        flex-direction: column-reverse;
+        gap: 40px;
+        width: 95%;
+    }
+
+    .homeTextContent {
+        width: 100%;
+        align-items: start;
+    }
+
+    .homeTextContent .homeTextContent-1 h1 {
+        font-size: 22px;
+        color: var(--main-color);
+        text-shadow: 3px 3px 12px var(--Sec-color);
+    }
+
+    .homeTextContent .homeTextContent-1 h2 {
+        font-size: 34px;
+        line-height: normal;
+        color: #fff;
+        text-shadow: 3px 3px 12px var(--Sec-color);
+    }
+
+    .homeTextContent .homeTextContent-1 h3 {
+        font-size: 20px;
+        line-height: normal;
+        color: #fff;
+        text-shadow: 3px 3px 12px var(--Sec-color);
+    }
+
+    .homeTextContent p {
+        font-size: 13px;
+    }
+
+    .homeTextContent .homeTextContent-1 h3 span {
+        color: var(--main-color);
+        text-shadow: 3px 3px 12px var(--Sec-color);
+    }
+
+    .homeTextContent button {
+        background-color: var(--main-color);
+        color: #fff;
+        border-color: var(--main-color);
+    }
+
+    .homeTextContent button:hover {
+        pointer-events: none;
+    }
+
+    .homeTextContent button::after ,
+    .homeTextContent button::before {
+        content: none;
+        display: none;
+    }
+
+    .homeContent img {
+        width: 100%;
+    }
+
+    /* ! About style (min-width: 768px) and (max-width: 1024px)*/
+
+    #About {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .aboutContent {
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aboutContentText {
+        width: fit-content;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aboutContentText h1 {
+        font-size: 30px;
+        border-radius: 24px 0;
+    }
+
+    .aboutContentText .part2 {
+        width: 95%;
+    }
+
+    .aboutContentText .part2 h6 {
+        font-size: 16px;
+    }
+
+    .aboutContentText .part2 h2 {
+        font-size: 22px;
+    }
+
+    .part2 .AboutMeTextP p {
+        font-size: 14px;
+    }
+
+    .aboutContent img {
+        display: none;
+    }
+
+    /* ! Skills style (min-width: 768px) and (max-width: 1024px) */
+    #Skills {
+        height: 70vh;
+    }
+
+    #Skills h1 {
+        font-size: 24px;
+    }
+
+    #Skills .SkillsTitle div {
+        width: 120px;
+    }
+
+    #SkillsBars {
+        width: 95%;
+    }
+
+    /* ! Projects style (min-width: 768px) and (max-width: 1024px) */
+    #Projects {
+        height: 80vh;
+        justify-content: space-evenly;
+    }
+
+    .ProjectsTitle h1 {
+        font-size: 24px;
+    }
+
+    .ProjectsTitle div {
+        width: 120px;
+    }
+
+    .ProjectTexts p {
+        font-size: 10px;
+    }
+
+    .ProjectSliderPart {
+        height: 70%;
+        width: 80%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .project {
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ProjectSliderPart .project img {
+        width: 100%;
+        height: 70%;
+    }
+
+    .ProjectSliderPart button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .ProjectSliderPart button i {
+        font-size: 18px;
+    }
+
+    .ProjectSliderPart button:nth-child(1):hover i {
+        margin-right: 0px;
+    }
+
+    .ProjectSliderPart button:last-child:hover i {
+        margin-left: 0px;
+    }
+
+
+    /* ! Contact style (min-width: 768px) and (max-width: 1024px) */
+    .contactTitle h1 {
+        font-size: 24px;
+    }
+
+    .contactTitle div {
+        width: 140px;
+    }
+
+    .contactTopTitle p {
+        font-size: 10px;
+    }
+
+    .contactInpsPart h1 {
+        font-size: 16px;
+        padding: 5px 24px;
+        border-radius: 16px 0;
+    }
+
+    .contactInpsPart form {
+        width: 95%;
+    }
+
+    form button {
+        font-size: 16px;
+        padding: 6px 20px;
+    }
+
+    /* ! footer style (min-width: 768px) and (max-width: 1024px) */
+    footer {
+        flex-direction: column;
+        padding: 10px 5px;
+    }
+
+    footer h1 {
+        font-size: 11px;
+    }
+
+    .phone i {
+        font-size: 18px;
+    }
+
+    .linksFooter {
+        gap: 12px;
+    }
+
+    .phone a {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .homeContent {
+        width: 90%;
+    }
+
+    .homeTextContent .homeTextContent-1 h1 {
+        font-size: 20px;
+    }
+
+    .homeTextContent .homeTextContent-1 h2 {
+        font-size: 40px;
+    }
+
+    .homeTextContent .homeTextContent-1 h3 {
+        font-size: 20px;
+    }
+
+    .homeContent img {
+        width: 50%;
+    }
+}

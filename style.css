@@ -163,6 +163,7 @@ nav .navLink {
     will-change: transform;
     z-index: 0;
     background: none;
+    text-decoration: none;
     cursor: pointer;
 }
 
